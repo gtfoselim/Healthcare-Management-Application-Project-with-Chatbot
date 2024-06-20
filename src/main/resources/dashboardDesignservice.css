@@ -1,0 +1,226 @@
+.top-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width:.4px .4px .2px .4px ;
+}
+
+.semi-top-form{
+    -fx-background-color:#efefef;
+    -fx-border-color:#000;
+    -fx-border-width:.2px .4px .8px .4px;
+}
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#ff3547;
+}
+
+.minimize{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.minimize:hover{
+    -fx-background-color:#ddd;
+}
+.nav-form{
+    -fx-background-color:linear-gradient(to bottom right, #272b3f, #256b51);
+}
+
+.nav-btn{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+    -fx-font-family:"Arial";
+    -fx-font-size:14px;
+    -fx-text-fill:#fff;
+    -fx-alignment:CENTER-LEFT;
+}
+.shadow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.5), 6,0,0,0);
+}
+.white-bg{
+    -fx-background-color:#fff;
+    -fx-background-radius:8px;
+}
+
+.card{
+    -fx-background-color:linear-gradient(to right, #2b303c, #525968);
+    -fx-background-radius:5px;
+}
+/* Style de base pour la table */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2;
+    -fx-border-color: #256b51; /* Bordure subtile avec couleur personnalisée */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0.5, 0, 5); /* Ombre portée pour une apparence 3D */
+    -fx-padding: 10px;
+}
+
+/* Style pour les colonnes */
+.table-view .table-column {
+    -fx-alignment: CENTER;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333; /* Texte plus foncé pour une meilleure lisibilité */
+}
+
+/* En-tête de colonne */
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to right, #272b3f, #256b51);
+    -fx-background-insets: 0;
+    -fx-background-radius: 10px 10px 0 0; /* Coins arrondis */
+    -fx-border-color: #fff;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.5, 0, 1); /* Ombre interne pour profondeur */
+}
+
+/* Label de l'en-tête de colonne */
+.table-view .column-header .label {
+    -fx-text-fill: #fff;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: CENTER; /* Texte centré */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 2, 0.3, 0, 1); /* Ombre portée légère */
+}
+
+/* Lignes de données alternées */
+.table-view .table-row-cell:even {
+    -fx-background-color: #f6f8f8; /* Couleur claire pour les lignes paires */
+}
+
+.table-view .table-row-cell:odd {
+    -fx-background-color: #f7fafa; /* Couleur légèrement plus foncée pour les lignes impaires */
+}
+
+/* Effet survol */
+.table-view .table-row-cell:hover {
+    -fx-background-color: #b0dfe5; /* Changer la couleur de fond au survol */
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 1); /* Effet d'ombre interne au survol */
+}
+
+/* Ajustements pour la taille et transitions fluides */
+.table-view .column-header, .filter {
+    -fx-background-color: transparent;
+    -fx-pref-height: 40px;
+}
+
+.table-view .table-row-cell, .column-header-background {
+    -fx-transition: all 0.3s ease-in-out; /* Transitions fluides */
+}
+
+
+.textfield{
+    -fx-background-color: linear-gradient(to bottom, #f0f0f0, #dcdcdc);
+    -fx-border-color: linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-width: 1px;
+    -fx-font-family: "Tahoma";
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.textfield:focused {
+    -fx-border-width: 2px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 0, 4, 8, 0); /* Correction effectuée */
+}
+
+
+.search{
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right, #272b3f, #256b51);
+    -fx-border-radius: 6px;
+    -fx-font-size: 13px;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-padding: 0 0 0 28px;
+    -fx-transition: all 0.2s ease-in-out;
+}
+.search:focused{
+    -fx-border-width: 2px;
+
+}
+.import-btn{
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #ff5a5f;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 3, 0, 0, 0);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.import-btn:hover{
+    -fx-background-color: #ccc;
+
+}
+.add-btn{
+    -fx-background-color: #2b52b2;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+}
+.add-btn:hover{
+    -fx-background-color: #2b52b2;
+
+}
+.update-btn{
+    -fx-background-color: #327252;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.update-btn:hover{
+    -fx-background-color: #369866;
+
+}
+.delete-btn{
+    -fx-background-color: #86253f;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.delete-btn:hover{
+    -fx-background-color: #a52546;
+
+}
+.clear-btn{
+    -fx-background-color: #a03089;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.clear-btn:hover{
+    -fx-background-color: #9c2e86;
+
+}
+
+.exit{
+    -fx-background-color: #c22c40;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0, 1, 1);
+    -fx-transition: all 0.2s ease-in-out;
+}
+.exit:hover{
+    -fx-background-color: #af2138;
+
+}
+
+

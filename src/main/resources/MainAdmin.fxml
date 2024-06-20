@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import com.visita.controllers.MainAdminController?>
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="400.0" spacing="20"
+      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.visita.controllers.MainAdminController"
+      style="-fx-background-color: #f0f0f0; -fx-padding: 20px;">
+
+    <Button onAction="#openReclamationView" text="Gérer les Réclamations"
+            style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-border-color: #388E3C; -fx-border-width: 1px; -fx-cursor: hand;"/>
+
+    <Button onAction="#openResponseView" text="Gérer les Réponses"
+            style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #2196F3; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-border-color: #1976D2; -fx-border-width: 1px; -fx-cursor: hand;"/>
+</VBox>

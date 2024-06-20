@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1272.0" stylesheets="@styleservice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.processPayment">
+   <children>
+      <TextField fx:id="idcard" layoutX="828.0" layoutY="377.0" prefHeight="26.0" prefWidth="227.0" promptText="CARD" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <TextField fx:id="bankid" layoutX="828.0" layoutY="241.0" prefHeight="26.0" prefWidth="227.0" promptText="Bank account" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <TextField fx:id="securityid" layoutX="828.0" layoutY="317.0" prefHeight="26.0" prefWidth="227.0" promptText="Security Code" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <TextField fx:id="postalid" layoutX="828.0" layoutY="439.0" prefHeight="26.0" prefWidth="227.0" promptText="Postal code" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <DatePicker layoutX="828.0" layoutY="500.0" prefHeight="26.0" prefWidth="227.0" promptText="Expiration date" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <TextField layoutX="830.0" layoutY="562.0" prefHeight="26.0" prefWidth="227.0" promptText="Country" styleClass="text-field1" stylesheets="@CSS/stylefront.css" />
+      <ButtonBar layoutX="213.0" layoutY="412.0" prefHeight="40.0" prefWidth="200.0" />
+      <VBox layoutX="-1.0" prefHeight="700.0" prefWidth="632.0" style="-fx-background-color: #F0F0F2;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="195.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/default_image12.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="220.0" top="48.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Label text="VISITA" textFill="#61a4b7">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="50.0" left="300.0" top="-60.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Destinatair :">
+               <VBox.margin>
+                  <Insets left="200.0" top="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Visita : 00115869" textFill="#77b5fe">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Description :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Reserver Rendezvous" textFill="#77b5fe">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Merci Pour Votre Confiance !" textFill="#77b5fe">
+               <font>
+                  <Font name="System Italic" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="A Payer :">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="150.0" text="TOTAL :     50DT" textFill="#77b5fe">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="200.0" top="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="200.0" top="15.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Versé : ">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="0.00DT" textFill="#77b5fe">
+                     <HBox.margin>
+                        <Insets left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Separator prefHeight="2.0" prefWidth="138.0">
+                     <HBox.margin>
+                        <Insets left="-89.0" top="40.0" />
+                     </HBox.margin>
+                  </Separator>
+                  <Label text="Total : ">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-145.0" top="50.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="50DT" textFill="#77b5fe">
+                     <HBox.margin>
+                        <Insets left="20.0" top="50.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+    <Button fx:id="btnpayer" layoutX="1104.0" layoutY="639.0" mnemonicParsing="false" onAction="#processPayment" style="-fx-background-color: #77b5fe;" text="Payer" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="868.0" layoutY="125.0" text="Remplir Les champs SVP">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

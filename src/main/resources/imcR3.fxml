@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="731.0" prefWidth="998.0" stylesheets="@styleservice.css">
+         <children>
+            <AnchorPane fx:id="resultaimc1" layoutX="9.0" layoutY="45.0" prefHeight="427.0" prefWidth="870.0">
+               <stylesheets>
+                  <URL value="@styleservice.css" />
+                  <URL value="@dashboardDesignservice.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="delete-btn" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <ImageView fitHeight="507.0" fitWidth="740.0" layoutX="58.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/ImcS1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="7.0" layoutY="576.0" prefHeight="58.0" prefWidth="870.0">
+               <stylesheets>
+                  <URL value="@dashboardDesignservice.css" />
+                  <URL value="@styleservice.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="white-bg" />
+                  <String fx:value="delete-btn" />
+                  <String fx:value="shadow" />
+               </styleClass>
+               <children>
+                  <Label alignment="CENTER" layoutX="300.0" layoutY="12.0" prefHeight="34.0" prefWidth="262.0" styleClass="secondary-color" text="SUR POIDS ">
+                     <stylesheets>
+                        <URL value="@styleservice.css" />
+                        <URL value="@dashboardDesignservice.css" />
+                     </stylesheets>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <styleClass>
+            <String fx:value="secondary-color" />
+            <String fx:value="shadow" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</StackPane>

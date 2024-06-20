@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="217.0" prefWidth="313.0" styleClass="secondary-color" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.NomPrenomFormController">
+   <children>
+      <Label layoutX="41.0" layoutY="13.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Entrez votre nom et prénom" />
+      <TextField fx:id="nomPrenomField" layoutX="58.0" layoutY="69.0" promptText="Nom Prénom" style="-fx-font-size: 16px;" styleClass="doctor-card" stylesheets="@styleservice.css" />
+      <Button layoutX="109.0" layoutY="131.0" onAction="#valider" style="-fx-font-size: 16px;                    -fx-background-color: #4CAF50;                    -fx-text-fill: white;                    -fx-padding: 10 20;                    -fx-border-radius: 5px;                    -fx-background-radius: 5px;" styleClass="card" text="Valider">
+         <stylesheets>
+            <URL value="@styleservice.css" />
+            <URL value="@dashboardDesignservice.css" />
+         </stylesheets>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@dashboardDesignservice.css" />
+      <URL value="@styleservice.css" />
+   </stylesheets>
+</AnchorPane>

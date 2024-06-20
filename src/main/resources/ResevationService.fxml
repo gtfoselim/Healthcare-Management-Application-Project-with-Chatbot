@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="508.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.ResevationService">
+   <children>
+      <BorderPane prefHeight="508.0" prefWidth="689.0">
+         <right>
+            <VBox prefHeight="508.0" prefWidth="326.0" styleClass="vbox_background_right" stylesheets="styleservice.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="318.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="105.0" prefWidth="318.0" stylesheets="@styleservice.css">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="203.0">
+                                       <children>
+                                          <Label prefHeight="15.0" prefWidth="190.0" text="RESERVATION online" textFill="#6e4f4f">
+                                             <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label prefHeight="20.0" prefWidth="207.0" text="get your RESERVATION" textFill="#4e3838">
+                                             <font>
+                                                <Font name="Cambria" size="15.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <ImageView fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@values/icons8-rank-50.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <styleClass>
+                                    <String fx:value="free-delivery-card" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="33.0" prefWidth="326.0">
+                     <children>
+                        <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="42.0" prefWidth="310.0">
+                           <children>
+                              <TextField fx:id="SERVICE_ID_res1" alignment="CENTER" prefHeight="40.0" prefWidth="272.0" promptText="id" stylesheets="@styleservice.css" visible="false">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="transparent" />
+                                    <String fx:value="add-btn" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="326.0">
+                     <children>
+                        <TextField fx:id="user_NAME_res" alignment="CENTER" prefHeight="40.0" prefWidth="272.0" promptText="  YOUR NAME ...." stylesheets="@styleservice.css">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="transparent" />
+                              <String fx:value="add-btn" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="53.0" prefWidth="326.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="73.0" prefWidth="326.0">
+                           <children>
+                              <TextField fx:id="User_Email_resv" alignment="CENTER" prefHeight="40.0" prefWidth="270.0" promptText="\@EMAIL" stylesheets="@styleservice.css">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="add-btn" />
+                                    <String fx:value="button" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="225.0" prefHeight="82.0" prefWidth="326.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="38.0" prefWidth="326.0">
+                           <children>
+                              <Button fx:id="Reserver" mnemonicParsing="false" onAction="#handleReservation" prefHeight="30.0" prefWidth="196.0" stylesheets="@styleservice.css" text="RESERVER" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="chosen-fruit-card" />
+                                    <String fx:value="cursor_hand" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="messageLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="42.0" prefWidth="736.0" textFill="#47f489">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="vbox_background_center" stylesheets="@styleservice.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="135.0" prefWidth="378.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="210.0" fitWidth="364.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@values/default_image12.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="407.0" prefWidth="363.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="116.0" prefWidth="363.0">
+                           <children>
+                              <ImageView fx:id="ServiceIMG" fitHeight="176.0" fitWidth="390.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../Desktop/img/banner-Gynecology-Clinic2.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="121.0" prefWidth="363.0">
+                           <children>
+                              <TextField fx:id="Service_Name" alignment="CENTER" editable="false" prefHeight="62.0" prefWidth="310.0" promptText="SERVICE NAME" stylesheets="@styleservice.css">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="transparent" />
+                                    <String fx:value="add-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

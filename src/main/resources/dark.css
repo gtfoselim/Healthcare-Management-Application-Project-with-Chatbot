@@ -1,0 +1,164 @@
+.profile-layout {
+    -fx-background-color: #2f2813;
+    -fx-background-radius: 0 0 50 50;
+}
+
+.primary-color {
+    -fx-background-color: #193126;
+}
+
+.secondary-color {
+    -fx-background-color: #2b2c27;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+
+    -fx-border-radius: 50;
+}
+
+.profile_button {
+    -fx-background-color: #3d3424;
+}
+
+.selected-border {
+    -fx-border-color: #2d2d2d;
+    -fx-border-width: 0 3 0 0;
+}
+
+.selected:hover {
+    -fx-background-color: #333232;
+}
+
+.image-view {
+    -fx-clip-shape: circle;
+}
+
+.display_button:hover {
+    -fx-background-color: #332614;
+}
+
+.cursor_hand {
+    -fx-cursor: hand;
+}
+
+.rounded-image {
+    -fx-clip-shape: circle;
+}
+
+
+.title-label,
+.type-label,
+.description-label,
+.likes-label,
+.country-label,
+.date-label{
+    -fx-font-size: 14px; /* Font size */
+    -fx-text-fill: #ffff; /* Text color for light mode (dark gray) */
+}
+
+.tableView {
+    -fx-alignment: center;
+}
+
+.vbox_background_center {
+    -fx-background-image: url("values/bgrighttt.jpg");
+}
+
+.vbox_background_right {
+    -fx-background-image: url("values/greenn.jpg");
+}
+
+.vbox_background_rightsignup {
+    -fx-background-image: url("values/signuppp.jpg");
+}
+
+.login_button {
+    -fx-background-color: #72311b;
+    -fx-text-fill: #ffff;
+}
+
+.toggle-switch{
+    -fx-background-color: #383838;
+    -fx-background-radius: 100;
+}
+
+.login_button:hover {
+    -fx-background-color: #362915;
+    -fx-text-fill: #ffff;
+}
+
+.signup_button {
+    -fx-background-color: transparent;
+}
+
+.signup_button:hover {
+    -fx-background-color: #421d10;
+}
+
+.doctor_button:hover {
+    -fx-background-color: #132b36;
+}
+
+.affichage_profile {
+    -fx-background-image: url("values/greenn.jpg");
+}
+
+.affichage_profile_layout {
+    -fx-background-color: #082c24;
+}
+
+/* Example CSS rule that sets the minimum width of all TableView columns */
+.table-view .column {
+    -fx-min-width: 50px; /* Adjust this value as needed */
+}
+
+.chosen_profile {
+    -fx-background-color: #2e483f;
+    -fx-background-radius: 50 50 50 50;
+    -fx-border-radius: 50;
+}
+
+.profile_side {
+    -fx-background-color: #33483f;
+}
+
+.profile_belowside {
+    -fx-background-color: #33483f;
+}
+
+.doctor-list {
+    -fx-background-color: #362c2c; /* Set the background color to white */
+}
+
+/* Style for each doctor card */
+.doctor-card {
+    -fx-background-color: #423a3a; /* Set the default background color for all cards */
+    -fx-background-radius: 50; /* Set the background radius */
+    -fx-padding: 10px; /* Add padding for spacing */
+}
+
+
+
+/* Style for the card */
+.post-card {
+    -fx-padding: 15 50 15 50; /* Padding inside the card */
+    -fx-border-radius: 8; /* Border radius for rounded corners */
+    -fx-background-color: #2a2828; /* Background color */
+    -fx-border-color: #312f2f; /* Border color */
+    -fx-border-width: 1; /* Border width */
+    -fx-background-radius: 8; /* Background radius for rounded corners */
+    -fx-pref-width: 300; /* Preferred width of the card (adjust as needed) */
+    -fx-margin-left: 10; /* Margin from the left */
+    -fx-margin-right: 10; /* Margin from the right */
+}
+
+
+
+
+.post-card:hover {
+    -fx-background-color: #0f2d05; /* White */
+    -fx-border-color: #1b3617; /* Light gray */
+}
+

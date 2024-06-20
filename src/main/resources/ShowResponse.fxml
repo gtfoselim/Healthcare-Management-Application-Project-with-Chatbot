@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.ShowResponseController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane prefHeight="654.0" prefWidth="1082.0">
+                    <center>
+                        <AnchorPane prefHeight="600.0" prefWidth="897.0" styleClass="secondary-color" stylesheets="@styleservice.css">
+                            <children>
+                                <AnchorPane prefHeight="600.0" prefWidth="885.0">
+                                    <children>
+                                        <AnchorPane prefHeight="302.0" prefWidth="884.0">
+                                            <children>
+                                                <VBox alignment="CENTER" layoutY="-5.0" prefHeight="605.0" prefWidth="906.0" spacing="20" styleClass="shadow" stylesheets="@dashboardDesignservice.css">
+
+                                                    <!-- Ajout du champ de texte pour la recherche -->
+                                                    <TextField fx:id="searchField" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="862.0" promptText="Rechercher..." style="-fx-background-radius: 50;" styleClass="search" stylesheets="@styleservice.css" />
+
+                                                    <TableView fx:id="responseTableView" prefHeight="502.0" prefWidth="870.0" styleClass="table-view" VBox.vgrow="ALWAYS">
+                                                        <columns>
+
+                                                            <TableColumn fx:id="reclamationIdColumn" prefWidth="100.0" text="Reclamation ID" />
+                                                            <TableColumn fx:id="authorColumn" prefWidth="150.0" text="Author" />
+                                                            <TableColumn fx:id="responseContentColumn" prefWidth="200.0" text="Response Content" />
+                                                            <TableColumn fx:id="responseDateColumn" prefWidth="155.0" text="Response Date" />
+                                                            <TableColumn fx:id="actionColumn" prefWidth="100.0" text="Action" />
+                                                        </columns>
+                                                        <VBox.margin>
+                                                            <Insets left="30.0" />
+                                                        </VBox.margin>
+                                                    </TableView>
+
+                                                    <!-- Ajout du bouton Refresh -->
+                                                    <Button fx:id="refreshButton" layoutX="2.0" layoutY="2.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="delete-btn" stylesheets="@dashboardDesignservice.css" text="Refresh" />
+                                                    <padding>
+                                                        <Insets bottom="10.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                    <top>
+                        <AnchorPane prefHeight="54.0" prefWidth="1119.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="46.0" prefWidth="1111.0" styleClass="nav-form" stylesheets="@dashboardDesignservice.css">
+                                    <children>
+                                        <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="main_form" layoutY="-11.0" prefHeight="610.0" prefWidth="198.0" stylesheets="@dashboardDesignservice.css">
+                                    <children>
+                                        <Label layoutX="70.0" layoutY="109.0" text="WELCOME" textFill="WHITE" />
+                                        <Line endX="88.0" layoutX="100.0" layoutY="146.0" startX="-89.5999984741211" stroke="WHITE" />
+                                        <Button layoutX="1.0" layoutY="173.0" mnemonicParsing="false" onAction="#redirecttoadminPage" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="                 HOME" />
+                              <HBox alignment="CENTER" layoutX="5.0" layoutY="218.0" prefHeight="35.0" prefWidth="173.0">
+                                 <children>
+                                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#ShowRec" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="Show Reclamation">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </HBox>
+                                        <ImageView fx:id="userImageView" fitHeight="100" fitWidth="100" layoutX="50.0">
+                                            <image>
+                                                <Image url="@values/default.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                    <styleClass>
+                                        <String fx:value="nav-form" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

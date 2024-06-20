@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f3cc97; -fx-spacing: 20px; -fx-padding: 30px;" styleClass="transparent-background shadow" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.UpdateReclamationController">
+
+    <!-- Header Label -->
+    <Label style="-fx-font-size: 36px; -fx-font-weight: bold;" text="Modifier la réclamation" />
+
+    <!-- Nom Field -->
+    <TextField fx:id="nomField" prefWidth="300" promptText="Nom" style="-fx-font-size: 18px;" styleClass="comboBox">
+      <stylesheets>
+         <URL value="@styleservice.css" />
+         <URL value="@dashboardDesignservice.css" />
+      </stylesheets></TextField>
+
+    <!-- Sujet Field -->
+    <TextField fx:id="sujetField" prefWidth="300" promptText="Sujet" style="-fx-font-size: 18px;" styleClass="comboBox">
+      <stylesheets>
+         <URL value="@dashboardDesignservice.css" />
+         <URL value="@styleservice.css" />
+      </stylesheets></TextField>
+
+    <!-- Description Field -->
+    <TextField fx:id="descriptionField" prefHeight="115.0" prefWidth="532.0" promptText="Description" style="-fx-font-size: 18px;" styleClass="comboBox" stylesheets="@styleservice.css" />
+
+    <!-- Catégorie ComboBox -->
+    <ComboBox fx:id="categorieComboBox" prefHeight="28.0" prefWidth="541.0" promptText="Catégorie" style="-fx-font-size: 18px;" styleClass="chosen-fruit-card" stylesheets="@styleservice.css">
+        <!-- Predefined category choices -->
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Technical" />
+                <String fx:value="Customer Service" />
+                <String fx:value="Billing" />
+                <String fx:value="Product Quality" />
+            </FXCollections>
+        </items>
+    </ComboBox>
+
+    <!-- Update Button -->
+    <Button onAction="#handleUpdate" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 30px; -fx-padding: 10px 20px;" styleClass="underweight" stylesheets="@styleimc.css" text="Mettre à jour" />
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<!-- ViewResponses.fxml -->
+
+<VBox alignment="CENTER" prefHeight="604.0" prefWidth="545.0" spacing="15" style="-fx-background-color: #f3cc97; -fx-padding: 20;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.ViewResponsesController">
+
+    <!-- Reclamation ID Label -->
+    <Label fx:id="reclamationIdLabel" style="-fx-font-size: 16pt; -fx-padding: 5px; -fx-margin: 5px; -fx-text-fill: #333;" text="Reclamation :" />
+
+    <!-- Responses TextArea -->
+    <TextArea fx:id="responsesTextArea" editable="false" prefHeight="277.0" prefWidth="505.0" style="-fx-font-size: 14pt; -fx-padding: 10px; -fx-margin: 10px; -fx-background-color: #fafafa; -fx-text-fill: #333;" styleClass="comboBox">
+      <stylesheets>
+         <URL value="@styleservice.css" />
+         <URL value="@dashboardDesignservice.css" />
+         <URL value="@styleimc.css" />
+      </stylesheets></TextArea>
+
+    <!-- Rating Component -->
+    <Label style="-fx-font-size: 16pt; -fx-padding: 5px; -fx-margin: 5px; -fx-text-fill: #333;" text="Rate this response:" />
+    <Slider fx:id="ratingSlider" blockIncrement="1" max="5" min="0" minorTickCount="0" showTickLabels="true" showTickMarks="true" style="-fx-font-size: 14pt; -fx-padding: 5px; -fx-margin: 5px; -fx-background-color: #fafafa;" styleClass="button" stylesheets="@styleimc.css" />
+
+    <!-- Average Rating Label -->
+    <Label fx:id="averageRatingLabel" style="-fx-font-size: 16pt; -fx-padding: 5px; -fx-margin: 5px; -fx-text-fill: #333;" text="Average Rating: " />
+
+    <!-- Send Rating Button -->
+    <Button fx:id="sendRatingButton" onAction="#sendRating" style="-fx-font-size: 16pt; -fx-padding: 5px; -fx-margin: 5px; -fx-background-color: #3d8cb0; -fx-text-fill: #fff;" text="Send Rating" />
+
+</VBox>

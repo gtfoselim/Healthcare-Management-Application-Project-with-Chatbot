@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.AddCategory">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="-1.6" prefHeight="600.0" prefWidth="1106.0" stylesheets="@dashboardDesignservice.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="46.0" prefWidth="1099.0" styleClass="nav-form" stylesheets="@dashboardDesignservice.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane fx:id="main_form" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label layoutX="70.0" layoutY="109.0" text="WELCOME" textFill="WHITE" />
+                        <Line endX="88.0" layoutX="100.0" layoutY="146.0" startX="-89.5999984741211" stroke="WHITE" />
+                        <Button layoutX="-1.0" layoutY="175.0" mnemonicParsing="false" onAction="#redirecttoadminPage" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="                 HOME" />
+                        <Button fx:id="category_btn_nv" layoutX="-1.0" layoutY="228.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="185.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="             CATEGORY" />
+                        <ImageView fx:id="userImageView" fitHeight="100" fitWidth="100" layoutX="52.0">
+                           <image>
+                              <Image url="@values/default.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="service_btn_nv" layoutX="5.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleNewServiceButtonAction" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="             SERVICE" />
+                        <Button fx:id="serviceresv_btn_nv" layoutX="9.0" layoutY="332.0" mnemonicParsing="false" onAction="#handleServiceresvButtonAction" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="      SERVICES RSER">
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="nav-form" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                     <stylesheets>
+                        <URL value="@dashboardDesignservice.css" />
+                        <URL value="@styleservice.css" />
+                     </stylesheets>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="addCategory_form" layoutX="1.0" prefHeight="557.0" prefWidth="910.0">
+                           <styleClass>
+                              <String fx:value="secondary-color" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <AnchorPane layoutX="1.0" layoutY="2.0" prefHeight="301.0" prefWidth="902.0" stylesheets="@dashboardDesignservice.css">
+                                 <styleClass>
+                                    <String fx:value="secondary-color" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="TableView" layoutX="23.0" layoutY="48.0" prefHeight="239.0" prefWidth="847.0" stylesheets="@styleservice.css">
+                                      <columns>
+                                        <TableColumn fx:id="addCategory_col_NAME" prefWidth="159.20001792907715" text="NAME" />
+                                          <TableColumn fx:id="addCategory_col_DESCRIPTION" prefWidth="448.7998962402344" text="DESCRIPTION" />
+                                          <TableColumn fx:id="addCategory_col_ICON" prefWidth="238.40007324218755" text="ICON" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="addCategory_search" layoutX="24.0" layoutY="8.0" onKeyReleased="#searchCategories" prefHeight="26.0" prefWidth="241.0" promptText="SEARCH" stylesheets="@dashboardDesignservice.css">
+                                       <styleClass>
+                                          <String fx:value="textfield" />
+                                          <String fx:value="search" />
+                                       </styleClass></TextField>
+                                    <ImageView fitHeight="150.0" fitWidth="238.0" layoutX="385.0" layoutY="-54.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@values/default_image12.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="60.0" layoutX="24.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@values/output-onlinegiftools(9).gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="207.0" layoutY="315.0" text="NAME :">
+                                 <font>
+                                    <Font name="Candara Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addCategory_NAME" layoutX="277.0" layoutY="311.0" styleClass="textfield" stylesheets="@dashboardDesignservice.css" />
+                              <Label layoutX="207.0" layoutY="389.0" prefHeight="18.0" prefWidth="71.0" text="DESCRIPTION :">
+                                 <font>
+                                    <Font name="Candara Light" size="11.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="addCategory_DESCRIPTION" layoutX="277.0" layoutY="352.0" prefHeight="91.0" prefWidth="200.0" styleClass="textfield">
+                                 <stylesheets>
+                                    <URL value="@dashboardDesignservice.css" />
+                                    <URL value="@styleservice.css" />
+                                 </stylesheets></TextArea>
+                              <Label layoutX="207.0" layoutY="468.0" text="ICON:">
+                                 <font>
+                                    <Font name="Candara Light" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="addCategory_ICON" layoutX="279.0" layoutY="464.0" styleClass="textfield" stylesheets="@dashboardDesignservice.css" />
+                              <Button fx:id="addCategory_addBtn" layoutX="721.0" layoutY="459.0" mnemonicParsing="false" onAction="#AjouterC" prefHeight="34.0" prefWidth="66.0" styleClass="update-btn" text="ADD" textFill="#fcf7f7">
+                                 <stylesheets>
+                                    <URL value="@dashboardDesignservice.css" />
+                                    <URL value="@styleservice.css" />
+                                 </stylesheets>
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Button>
+                              <Button fx:id="addCategory_updateBtn" layoutX="805.0" layoutY="460.0" mnemonicParsing="false" onAction="#modifierC" prefHeight="34.0" prefWidth="77.0" styleClass="update-btn" stylesheets="@dashboardDesignservice.css" text="UPDATE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font></Button>
+                              <Button fx:id="addCategory_deleteBtn" layoutX="592.0" layoutY="460.0" mnemonicParsing="false" onAction="#supprimerC" prefHeight="32.0" prefWidth="74.0" styleClass="delete-btn" stylesheets="@dashboardDesignservice.css" text="DELETE" />
+                              <Button fx:id="addCategory_clearBtn" layoutX="509.0" layoutY="459.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="34.0" prefWidth="70.0" stylesheets="@dashboardDesignservice.css" text="CLEAR">
+                                 <styleClass>
+                                    <String fx:value="delete-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></Button>
+                           </children>
+                           <stylesheets>
+                              <URL value="@dashboardDesignservice.css" />
+                              <URL value="@styleservice.css" />
+                           </stylesheets>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

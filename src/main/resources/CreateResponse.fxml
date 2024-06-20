@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="300.0" prefWidth="400.0" spacing="10.0" style="-fx-padding: 20px;" styleClass="secondary-color" stylesheets="@styleservice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.CreateResponseController">
+
+    <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Create Response">
+      <font>
+         <Font name="Impact" size="12.0" />
+      </font></Label>
+
+    <GridPane alignment="CENTER" hgap="10" style="-fx-background-color: #ffffff; -fx-padding: 20px; -fx-border-radius: 10px;" vgap="10">
+        <Label text="Reclamation ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="reclamationIdField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Author:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="authorField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Response Content:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="responseContentArea" prefHeight="100" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+      <stylesheets>
+         <URL value="@styleservice.css" />
+         <URL value="@dashboardDesignservice.css" />
+      </stylesheets>
+      <styleClass>
+         <String fx:value="white-bg" />
+         <String fx:value="shadow" />
+      </styleClass>
+    </GridPane>
+
+    <Button onAction="#createResponse" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-border-color: #388E3C; -fx-border-width: 1px; -fx-cursor: hand;" styleClass="chosen_profile" text="Create Response">
+      <stylesheets>
+         <URL value="@styleservice.css" />
+         <URL value="@dashboardDesignservice.css" />
+      </stylesheets></Button>
+</VBox>

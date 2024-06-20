@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1129.0" styleClass="secondary-color" stylesheets="@styleservice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.ShowReclamationController">
+    <children>
+        <BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="982.0">
+         <right>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="699.0" prefWidth="866.0" stylesheets="@dashboardDesignservice.css" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="searchField" layoutX="23.0" layoutY="123.0" promptText="Entrez le nom de la réclamation à rechercher" style="-fx-padding: 10px; -fx-font-size: 16px; -fx-border-radius: 5px; -fx-background-color: #ffffff; -fx-border-color: #cccccc; -fx-border-width: 1px; -fx-background-radius: 50;">
+                            <effect>
+                                <DropShadow color="#cccccc" offsetX="3" offsetY="3" radius="5" />
+                            </effect>
+                        </TextField>
+                        <TableView fx:id="reclamationTableView" layoutX="14.0" layoutY="198.0" prefHeight="400.0" prefWidth="833.0" style="-fx-border-width: 1px; -fx-padding: 10px;">
+                            <columns>
+                                <TableColumn fx:id="nomColumn" prefWidth="150" style="-fx-font-size: 14px;" text="Nom" />
+                                <TableColumn fx:id="categorieColumn" prefWidth="100" style="-fx-font-size: 14px;" text="Catégorie" />
+                                <TableColumn fx:id="sujetColumn" prefWidth="150" style="-fx-font-size: 14px;" text="Sujet" />
+                                <TableColumn fx:id="descriptionColumn" prefWidth="188.0001220703125" style="-fx-font-size: 14px;" text="Description" />
+                                <TableColumn fx:id="subdateColumn" minWidth="1.60009765625" prefWidth="205.59991455078125" style="-fx-alignment: CENTER; -fx-font-size: 14px;" text="Date" />
+                            </columns>
+                        </TableView>
+                        <Button layoutX="333.0" layoutY="616.0" onAction="#handleRefresh" style="-fx-font-size: 14px; -fx-background-color: #4CAF50; -fx-text-fill: white; -fx-border-radius: 5px; -fx-padding: 8px 16px; -fx-cursor: hand;" text="Refresh" />
+                        <Button layoutX="452.0" layoutY="616.0" onAction="#goToMainView" style="-fx-font-size: 14px; -fx-background-color: #FF5722; -fx-text-fill: white; -fx-border-radius: 5px; -fx-padding: 8px 16px; -fx-cursor: hand;" text="Main View" />
+                        <HBox alignment="CENTER" layoutX="328.0" layoutY="25.0" prefHeight="50.0" prefWidth="226.0" styleClass="chosen-fruit-card" stylesheets="@styleservice.css">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="100.0" prefWidth="203.0">
+                                    <children>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="154.0" text="Reclamation" textFill="#6e4f4f">
+                                            <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                                <ImageView fitHeight="49.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@values/icons8-rank-50.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+         </right>
+        </BorderPane>
+        <ImageView fitHeight="74.0" fitWidth="96.0" layoutX="1059.0" layoutY="638.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@values/default_image12.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

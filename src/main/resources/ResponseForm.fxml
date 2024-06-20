@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="286.0" prefWidth="354.0" styleClass="secondary-color" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.ResponseFormController">
+   <children>
+      <Label layoutX="67.0" layoutY="9.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Répondre à la Réclamation" />
+      <TextArea fx:id="responseTextArea" layoutX="29.0" layoutY="56.0" prefHeight="150.0" prefWidth="300.0" promptText="Entrez votre réponse ici" style="-fx-font-size: 14px;" styleClass="textfield">
+         <stylesheets>
+            <URL value="@styleservice.css" />
+            <URL value="@dashboardDesignservice.css" />
+         </stylesheets>
+      </TextArea>
+      <Button layoutX="51.0" layoutY="225.0" onAction="#handleReply" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-border-color: #388E3C; -fx-border-width: 1px; -fx-cursor: hand;" styleClass="update-btn" text="Envoyer">
+         <stylesheets>
+            <URL value="@styleservice.css" />
+            <URL value="@dashboardDesignservice.css" />
+         </stylesheets>
+      </Button>
+      <Button layoutX="203.0" layoutY="225.0" onAction="#handleClose" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white; -fx-padding: 10px 20px; -fx-border-radius: 5px; -fx-border-color: #E53935; -fx-border-width: 1px; -fx-cursor: hand;" styleClass="delete-btn" text="Annuler">
+         <stylesheets>
+            <URL value="@styleservice.css" />
+            <URL value="@dashboardDesignservice.css" />
+         </stylesheets>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@styleservice.css" />
+      <URL value="@dashboardDesignservice.css" />
+   </stylesheets>
+</AnchorPane>

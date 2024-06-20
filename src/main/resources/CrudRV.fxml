@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="640.0" prefWidth="910.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.CrudRV">
+   <children>
+      <BorderPane layoutX="8.4" layoutY="10.0" prefHeight="600.0" prefWidth="1106.0" stylesheets="@CSS/dashboardDesign.css">
+         <top>
+            <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="46.0" prefWidth="1099.0" styleClass="top-form" stylesheets="@CSS/dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                        <Button fx:id="rappelid" layoutX="1039.0" layoutY="10.0" mnemonicParsing="false" onAction="#rappelrv" text="Rappel" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane fx:id="main_form" prefHeight="554.0" prefWidth="162.0" stylesheets="@CSS/dashboardDesign.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="70.0" layoutY="109.0" text="WELCOME" textFill="WHITE" />
+                  <Line endX="88.0" layoutX="100.0" layoutY="146.0" startX="-89.5999984741211" stroke="WHITE" />
+                  <Button layoutX="10.0" layoutY="173.0" mnemonicParsing="false" onAction="#redirecttoadminPage" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@CSS/dashboardDesign.css" text="                HOME" />
+                  <Button layoutX="51.0" layoutY="223.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="109.0" styleClass="nav-btn" stylesheets="@CSS/dashboardDesign.css" text="Appointement" />
+                  <Button fx:id="btnreport" alignment="CENTER" layoutX="72.0" layoutY="259.0" mnemonicParsing="false" onAction="#actionreport" prefHeight="35.0" prefWidth="67.0" styleClass="nav-btn" stylesheets="@CSS/dashboardDesign.css" text="Report" />
+               </children>
+               <styleClass>
+                  <String fx:value="nav-form" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="addRV_form" layoutX="6.0" layoutY="7.0" prefHeight="539.0" prefWidth="902.0" styleClass="white-bg" stylesheets="@CSS/dashboardDesign.css">
+                     <children>
+                        <AnchorPane layoutX="1.0" layoutY="2.0" prefHeight="301.0" prefWidth="902.0" stylesheets="@CSS/dashboardDesign.css">
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                           <children>
+                              <TableView fx:id="tableview" layoutX="7.0" layoutY="48.0" prefHeight="239.0" prefWidth="894.0">
+                                 <columns>
+                                    <TableColumn fx:id="doctor" prefWidth="96.79999542236328" text="Doctor" />
+                                    <TableColumn fx:id="fullname" prefWidth="155.19998168945312" text="Fullname" />
+                                    <TableColumn fx:id="phone" prefWidth="198.39996337890625" text="Phone" />
+                                    <TableColumn fx:id="date" minWidth="0.0" prefWidth="127.19998168945312" text="DATE" />
+                                    <TableColumn fx:id="time" prefWidth="151.199951171875" text="Time" />
+                                    <TableColumn fx:id="note" prefWidth="151.199951171875" text="Note" />
+                                    <TableColumn fx:id="etat" prefWidth="151.199951171875" text="Etat" />
+                                    <TableColumn fx:id="email" prefWidth="151.199951171875" text="Email" />
+                                    <TableColumn fx:id="report" prefWidth="151.199951171875" text="Report" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="addRV_search" layoutX="14.0" layoutY="14.0" onKeyReleased="#searchrv" prefHeight="26.0" prefWidth="265.0" promptText="SEARCH" styleClass="search" stylesheets="@CSS/dashboardDesign.css" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="25.0" layoutY="319.0" text="Doctor">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="364.0" prefHeight="18.0" prefWidth="71.0" text="Fullname">
+                           <font>
+                              <Font name="Candara Light" size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="34.0" layoutY="410.0" text="Date">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnsave" layoutX="715.0" layoutY="490.0" mnemonicParsing="false" onAction="#addrv" prefHeight="34.0" prefWidth="66.0" styleClass="add-btn" stylesheets="@CSS/dashboardDesign.css" text="Save" />
+                        <Button fx:id="btnupdate" layoutX="799.0" layoutY="492.0" mnemonicParsing="false" onAction="#updaterv" prefHeight="34.0" prefWidth="77.0" styleClass="update-btn" stylesheets="@CSS/dashboardDesign.css" text="UPDATE" />
+                        <Button fx:id="btndelete" layoutX="586.0" layoutY="492.0" mnemonicParsing="false" onAction="#deleteRV" prefHeight="32.0" prefWidth="74.0" styleClass="delete-btn" stylesheets="@CSS/dashboardDesign.css" text="DELETE" />
+                        <Button fx:id="btnclear" layoutX="330.0" layoutY="490.0" mnemonicParsing="false" onAction="#clearrv" prefHeight="34.0" prefWidth="70.0" styleClass="delete-btn" stylesheets="@CSS/dashboardDesign.css" text="CLEAR" />
+                        <DatePicker fx:id="dateid" layoutX="95.0" layoutY="398.0" prefHeight="22.0" prefWidth="154.0" styleClass="textfield" stylesheets="@CSS/dashboardDesign.css" />
+                        <Label layoutX="34.0" layoutY="447.0" text="Time">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="33.0" layoutY="490.0" text="Note">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="fullnameid" layoutX="94.0" layoutY="359.0" prefHeight="27.0" prefWidth="154.0" />
+                        <TextField fx:id="timeid" layoutX="93.0" layoutY="441.0" prefHeight="28.0" prefWidth="155.0" />
+                        <TextField fx:id="noteid" layoutX="93.0" layoutY="485.0" prefHeight="26.0" prefWidth="156.0" />
+                        <Label layoutX="366.0" layoutY="318.0" text="Email">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailid" layoutX="412.0" layoutY="314.0" />
+                        <Label layoutX="366.0" layoutY="364.0" text="Phone">
+                           <font>
+                              <Font name="Candara Light" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="telid" layoutX="413.0" layoutY="360.0" />
+                        <TextField fx:id="idrendezvous" layoutX="331.0" layoutY="405.0" prefHeight="26.0" prefWidth="268.0" visible="false" />
+                        <Button fx:id="btnstat" layoutX="417.0" layoutY="490.0" mnemonicParsing="false" onAction="#stat" prefHeight="34.0" prefWidth="70.0" styleClass="delete-btn" stylesheets="@CSS/dashboardDesign.css" text="STAT" />
+                        <ChoiceBox fx:id="medecinid" layoutX="97.0" layoutY="315.0" prefWidth="150.0" />
+                        <Button fx:id="btnvalider" layoutX="505.0" layoutY="490.0" mnemonicParsing="false" onAction="#sendsms" prefHeight="34.0" prefWidth="66.0" styleClass="add-btn" stylesheets="@CSS/dashboardDesign.css" text="Valider" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

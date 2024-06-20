@@ -1,0 +1,48 @@
+/* Style pour les boutons */
+.button {
+    -fx-background-color: #00A0B0; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-size: 14px; /* Taille de la police */
+    -fx-padding: 8px 16px; /* Marge intérieure */
+    -fx-border-radius: 4px; /* Bord arrondi */
+}
+
+/* Style pour les boutons lorsque le curseur est dessus */
+.button:hover {
+    -fx-background-color: #007C8C; /* Couleur de fond */
+}
+
+/* Style pour les boutons lorsqu'ils sont pressés */
+.button:pressed {
+    -fx-background-color: #005A67; /* Couleur de fond */
+}
+
+/* Style pour les champs de texte */
+
+
+/* Style pour les tables */
+.table-view {
+    -fx-background-color: #fff; /* Couleur de fond */
+    -fx-border-color: #ccc; /* Couleur de la bordure */
+    -fx-border-width: 1px; /* Largeur de la bordure */
+    -fx-border-radius: 4px; /* Bord arrondi */
+}
+
+/* Style pour les en-têtes de colonne de la table */
+.table-view .column-header {
+    -fx-background-color: #E8D5CC; /* Couleur de fond */
+    -fx-text-fill: white; /* Couleur du texte */
+    -fx-font-weight: bold; /* Gras */
+}
+
+/* Style pour les cellules de la table */
+.table-view .table-row-cell {
+    -fx-background-color: #fff; /* Couleur de fond */
+    -fx-border-color: #ccc; /* Couleur de la bordure */
+    -fx-border-width: 0 0 1px 0; /* Largeur de la bordure (bas seulement) */
+}
+
+/* Style pour les cellules de la table lorsqu'elles sont sélectionnées */
+.table-view .table-row-cell:selected {
+    -fx-background-color: #F0EEE9; /* Couleur de fond */
+}

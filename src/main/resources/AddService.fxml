@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.AddService">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="-1.6" prefHeight="600.0" prefWidth="1106.0" stylesheets="@dashboardDesignservice.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                    <top>
+                        <AnchorPane prefHeight="45.0" prefWidth="200.0" styleClass="secondary-color" stylesheets="@styleservice.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane prefHeight="46.0" prefWidth="1099.0" styleClass="nav-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <Label layoutX="61.0" layoutY="6.0" text="VISITA DASHBOARD" />
+                                    </children>
+                           <stylesheets>
+                              <URL value="@dashboardDesignservice.css" />
+                              <URL value="@styleservice.css" />
+                           </stylesheets>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <left>
+                        <AnchorPane fx:id="main_form" stylesheets="@dashboardDesignservice.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label layoutX="70.0" layoutY="109.0" text="WELCOME" textFill="WHITE" />
+                                <Line endX="88.0" layoutX="100.0" layoutY="146.0" startX="-89.5999984741211" stroke="WHITE" />
+                                <Button layoutX="10.0" layoutY="173.0" mnemonicParsing="false" onAction="#redirecttoadminPage" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="               HOME" />
+                                <Button fx:id="category_btn_nv" layoutX="2.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleAddCategoryButtonAction" prefHeight="35.0" prefWidth="187.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="             CATEGORY" />
+                        <ImageView fx:id="userImageView" fitHeight="100" fitWidth="100" layoutX="50.0" layoutY="9.0">
+                           <image>
+                              <Image url="@values/default.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="service_btn_nv" layoutX="9.0" layoutY="274.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="             SERVICE" />
+                        <Button fx:id="serviceresv_btn_nv" layoutX="5.0" layoutY="333.0" mnemonicParsing="false" onAction="#handleServiceresvButtonAction" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@dashboardDesignservice.css" text="        SERVICES RSER">
+                           <font>
+                              <Font size="6.0" />
+                           </font>
+                        </Button>
+                            </children>
+                            <styleClass>
+                                <String fx:value="nav-form" />
+                                <String fx:value="shadow" />
+                            </styleClass>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="addService_form" layoutX="6.0" prefHeight="554.4" prefWidth="915.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="1.0" layoutY="2.0" onKeyReleased="#searchServices" prefHeight="301.0" prefWidth="902.0">
+                                            <children>
+                                                <TableView fx:id="TableView" layoutX="2.0" layoutY="48.0" prefHeight="239.0" prefWidth="900.0">
+                                                    <columns>
+                                                        <TableColumn fx:id="addService_col_NAME" prefWidth="117.59998321533203" text="NAME" />
+                                                        <TableColumn fx:id="addService_col_DESCRIPTION" prefWidth="308.7999954223633" text="DESCRIPTION" />
+                                                        <TableColumn fx:id="addService_col_DATE" minWidth="0.0" prefWidth="145.59994506835938" text="DATE" />
+                                          <TableColumn fx:id="addService_col_IMAGE" minWidth="0.0" prefWidth="120.0" text="IMAGE" />
+                                                        <TableColumn fx:id="addService_col_CATEGORY" prefWidth="85.60003662109375" text="CATEGORY" />
+                                                        <TableColumn fx:id="addService_col_ACTIVE" minWidth="0.0" prefWidth="125.60009765625" text="ACTIVE" />
+                                                    </columns>
+                                                </TableView>
+                                                <TextField fx:id="addService_SEARCH" layoutX="14.0" layoutY="8.0" onKeyReleased="#searchServices" prefHeight="26.0" prefWidth="251.0" promptText="SEARCH" styleClass="search" stylesheets="@dashboardDesignservice.css" />
+                                    <Button fx:id="export_EXL" layoutX="845.0" layoutY="7.0" mnemonicParsing="false" onAction="#exportToExcel" prefHeight="33.0" prefWidth="44.0" stylesheets="@dashboardDesignservice.css" textFill="#38d10d">
+                                       <styleClass>
+                                          <String fx:value="transparent" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <graphic>
+                                          <ImageView fitHeight="24.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                             <image>
+                                                <Image url="@values/exbgrm.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="25.0" fitWidth="60.0" layoutX="16.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@values/output-onlinegiftools(9).gif" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="396.0" layoutY="-52.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow">
+                                       <image>
+                                          <Image url="@values/default_image12.png" />
+                                       </image>
+                                    </ImageView>
+                                            </children>
+                                 <stylesheets>
+                                    <URL value="@dashboardDesignservice.css" />
+                                    <URL value="@styleservice.css" />
+                                 </stylesheets>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="secondary-color" />
+                                 </styleClass>
+                                        </AnchorPane>
+                                        <Label layoutX="25.0" layoutY="319.0" text="NAME :">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <TextField fx:id="addService_NAME" layoutX="95.0" layoutY="315.0" styleClass="textfield" stylesheets="@dashboardDesignservice.css" />
+                                        <TextArea fx:id="addService_DESCRIPTION" layoutX="95.0" layoutY="356.0" prefHeight="91.0" prefWidth="200.0" styleClass="textfield" stylesheets="@dashboardDesignservice.css" />
+                                        <Button fx:id="addService_addBtn" layoutX="715.0" layoutY="490.0" mnemonicParsing="false" onAction="#ajouterService" prefHeight="34.0" prefWidth="66.0" stylesheets="@dashboardDesignservice.css" text="ADD">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="update-btn" />
+                                 </styleClass></Button>
+                                        <Button fx:id="addService_updateBtn" layoutX="795.0" layoutY="490.0" mnemonicParsing="false" onAction="#modifierService" prefHeight="34.0" prefWidth="77.0" stylesheets="@dashboardDesignservice.css" text="UPDATE">
+                                 <styleClass>
+                                    <String fx:value="update-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></Button>
+                                        <Button fx:id="addService_deleteBtn" layoutX="586.0" layoutY="492.0" mnemonicParsing="false" onAction="#supprimerService" prefHeight="32.0" prefWidth="74.0" stylesheets="@dashboardDesignservice.css" text="DELETE">
+                                 <styleClass>
+                                    <String fx:value="delete-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></Button>
+                                        <Button fx:id="addService_clearBtn" layoutX="503.0" layoutY="491.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="34.0" prefWidth="70.0" stylesheets="@dashboardDesignservice.css" text="CLEAR">
+                                 <styleClass>
+                                    <String fx:value="delete-btn" />
+                                    <String fx:value="shadow" />
+                                 </styleClass></Button>
+                                        <DatePicker fx:id="addService_DATE" layoutX="95.0" layoutY="469.0" styleClass="textfield" stylesheets="@dashboardDesignservice.css" />
+                                        <ChoiceBox fx:id="addService_CATEGORY" layoutX="429.0" layoutY="317.0" prefWidth="150.0" />
+                                        <CheckBox fx:id="addService_ACTIVE" layoutX="424.0" layoutY="387.0" mnemonicParsing="false" />
+                                        <AnchorPane layoutX="774.0" layoutY="315.0" prefHeight="133.0" prefWidth="102.0" stylesheets="@dashboardDesignservice.css">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                            <children>
+                                                <ImageView fx:id="addService_IMAGE" fitHeight="148.0" fitWidth="106.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Button layoutY="123.0" mnemonicParsing="false" onAction="#handleUploadImageClick" prefHeight="26.0" prefWidth="109.0" styleClass="import-btn" stylesheets="@dashboardDesignservice.css" text="Import" />
+                                            </children>
+                                        </AnchorPane>
+                              <Label layoutX="3.0" layoutY="392.0" prefHeight="20.0" prefWidth="94.0" text="DESCRIPTION">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="471.0" text="DATE:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="353.0" layoutY="386.0" text="ACTIVE :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="344.0" layoutY="320.0" text="CATEGORY :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                           <stylesheets>
+                              <URL value="@dashboardDesignservice.css" />
+                              <URL value="@styleservice.css" />
+                           </stylesheets>
+                           <styleClass>
+                              <String fx:value="white-bg" />
+                              <String fx:value="secondary-color" />
+                           </styleClass>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

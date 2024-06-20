@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1312.0" styleClass="secondary-color" stylesheets="@styleservice.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visita.controllers.Front">
+   <children>
+      <BorderPane layoutX="16.0" layoutY="10.0" prefHeight="699.0" prefWidth="902.0">
+         <left>
+            <VBox prefHeight="699.0" prefWidth="432.0" styleClass="secondary-color" stylesheets="@CSS/stylefront.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="290.0" stylesheets="@CSS/stylefront.css" VBox.vgrow="NEVER">
+                     <VBox.margin>
+                        <Insets left="70.0" right="30.0" top="45.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="idrendezvous" prefHeight="40.0" prefWidth="235.0" promptText="Type here to search" styleClass="transparent" stylesheets="@CSS/stylefront.css">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="btnafficher" mnemonicParsing="false" onAction="#afficherRP" prefHeight="50.0" prefWidth="122.0" styleClass="search-button" stylesheets="@CSS/stylefront.css" text="Search" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+                  <VBox fx:id="chosenFruitCard" alignment="CENTER" prefHeight="535.0" prefWidth="100.0" stylesheets="@CSS/stylefront.css">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextArea fx:id="rapportT" prefHeight="104.0" prefWidth="299.0">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Italic" size="14.0" />
+                           </font>
+                        </TextArea>
+                        <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Separator prefHeight="0.0" prefWidth="118.0" />
+                              <Label alignment="CENTER" prefHeight="45.0" prefWidth="64.0" text="or" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Separator prefHeight="0.0" prefWidth="118.0" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="btnpdf" mnemonicParsing="false" onAction="#generatePDF" prefHeight="50.0" prefWidth="270.0" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="PDF" textFill="#828282">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="30.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <styleClass>
+                        <String fx:value="chosen_profile" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+                  <Pane prefHeight="57.0" prefWidth="435.0" VBox.vgrow="ALWAYS" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="25.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="699.0" prefWidth="755.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <Pane prefHeight="65.0" prefWidth="393.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="14.0" layoutY="-7.0" prefHeight="68.0" prefWidth="306.0" styleClass="shopping-online-card" stylesheets="@CSS/stylefront.css">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="100.0" prefWidth="203.0">
+                                       <children>
+                                          <Label prefHeight="29.0" prefWidth="190.0" text="Reservation online" textFill="#1b1a1a">
+                                             <font>
+                                                <Font name="Cambria Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    
+                                                                                                                                 </children>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="25.0" top="25.0" />
+                           </HBox.margin>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="470.0" prefWidth="458.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Doctor" />
+                        <ChoiceBox fx:id="medecinid" prefWidth="150.0" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fullname" />
+                        <TextField fx:id="fullnameid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+                        <TextField fx:id="telid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+                        <DatePicker fx:id="dateid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
+                        <TextField fx:id="timeid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Note" />
+                        <TextField fx:id="noteid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                        <TextField fx:id="emailid" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="35.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <ButtonBar prefHeight="40.0" prefWidth="382.0">
+                     <buttons>
+                        <Button fx:id="btnsave" mnemonicParsing="false" onAction="#addrv" prefHeight="31.0" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="Save">
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </Button>
+                        <Button fx:id="btnclear" mnemonicParsing="false" onAction="#clearrv" prefHeight="34.0" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="Clear" />
+                        <Button fx:id="btnupdate1" mnemonicParsing="false" onAction="#updaterv" prefHeight="35.0" prefWidth="139.0" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="Update" />
+                     </buttons>
+                     <VBox.margin>
+                        <Insets left="10.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </ButtonBar>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+      <VBox layoutX="-2.0" layoutY="9.0" prefHeight="699.0" prefWidth="91.0">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@values/output-onlinegiftools(7).gif" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="80.0" left="25.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#redirecttoadminPage" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools(8).gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#RedirectToAfficherPost" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools(6).gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#RedirectToDoctorProfile" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools(1).gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#RedirectToServicePost" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#redirectToChatBot" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="42.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools10.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#RedirectToImcPost" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@styleservice.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="53.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftoolsimc.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#redirectToRec" prefHeight="55.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools(5).gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#redirectToEvent" prefHeight="35.0" prefWidth="90.0" style="-fx-background-color: transparent;" text="Button">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/eventfront.gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="logoutButton" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#handleLogoutButton" prefHeight="45.0" prefWidth="89.0" style="-fx-background-color: transparent;" stylesheets="@CSS/animation.css" text="Button">
+               <graphic>
+                  <ImageView fitHeight="41.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@values/output-onlinegiftools(3).gif" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="110.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="963.0" layoutY="26.0" prefHeight="716.0" prefWidth="355.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="363.0" styleClass="shopping-online-card" stylesheets="@CSS/stylefront.css">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="68.0" prefWidth="284.0">
+                     <children>
+                        <Label prefHeight="48.0" prefWidth="224.0" text="UPDATE Appointement" textFill="#151515">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="15.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets left="15.0" right="25.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rendezvous">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="idrendezvous1" styleClass="text-field1" stylesheets="@CSS/stylefront.css">
+                     <HBox.margin>
+                        <Insets left="30.0" right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnpayer" mnemonicParsing="false" onAction="#payer" prefHeight="26.0" prefWidth="102.0" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="Payer">
+                     <HBox.margin>
+                        <Insets left="80.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="getrv" mnemonicParsing="false" onAction="#getrv" styleClass="add-btn" stylesheets="@CSS/stylefront.css" text="Get Rendezvous">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fitHeight="104.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets left="240.0" top="250.0" />
+               </VBox.margin>
+               <image>
+                  <Image url="@images/wejden.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
